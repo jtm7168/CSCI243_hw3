@@ -1,0 +1,17 @@
+commit 62fe49998a4743295797db8bbd06b17041f4f350
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 10:39:09 2025 -0400
+
+    fix 2: corrected == to = to remove garbage output for activity 1 part b
+
+commit fe3f75f0a5484983dc2dbed669af0a6d552805d6
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 10:11:07 2025 -0400
+
+    fix 1: stopped crashes caused by incorrect format specificer '%s' and replaced it with the correct format specifier '%c'
+
+commit b1e7543d8ebc41ab2886086b0a173a303395add9
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 09:55:44 2025 -0400
+
+    Initial commit:supplied assignment files
