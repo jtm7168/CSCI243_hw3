@@ -1,0 +1,35 @@
+commit 4166ecead7647d083f3739e0ae59776295f695f1
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 13:48:50 2025 -0400
+
+    Refactored good-life.c
+
+commit ca03c7a23019276af5d050dcdfc7d55f50ec6935
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 11:18:01 2025 -0400
+
+    cleared warnings, limit program to 50 generations, and removed unused variables
+
+commit 24379df38da0380a57d6b5124a9e5136c300209b
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 10:39:33 2025 -0400
+
+    added revisions log
+
+commit 62fe49998a4743295797db8bbd06b17041f4f350
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 10:39:09 2025 -0400
+
+    fix 2: corrected == to = to remove garbage output for activity 1 part b
+
+commit fe3f75f0a5484983dc2dbed669af0a6d552805d6
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 10:11:07 2025 -0400
+
+    fix 1: stopped crashes caused by incorrect format specificer '%s' and replaced it with the correct format specifier '%c'
+
+commit b1e7543d8ebc41ab2886086b0a173a303395add9
+Author: Jan Thomas Michalski <jtm7168@rit.edu>
+Date:   Wed Sep 17 09:55:44 2025 -0400
+
+    Initial commit:supplied assignment files
