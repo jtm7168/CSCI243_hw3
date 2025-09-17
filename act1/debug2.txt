@@ -1,0 +1,40 @@
+
+(gdb) run 123
+Starting program: /home/stu23/s2/jtm7168/Courses/CSCI243/Homeworks/hw3/CSCI243_hw3/act1/good-life 123
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+        ..Welcome to the Game of life..
+
+Breakpoint 1, main (argc=2, args=0x7fffffffe868) at good-life.c:143
+143                   printf("%s", life[row][col]);
+(gdb) display row
+1: row = 0
+(gdb) display col
+2: col = 0
+(gdb) whatislife
+Undefined command: "whatislife".  Try "help".
+(gdb) whatis life
+type = char [20][20]
+(gdb) display life[row][col]
+3: life[row][col] = -1 '\377'
+(gdb) continue
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+__strlen_avx2_rtm () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:512
+512     ../sysdeps/x86_64/multiarch/strlen-avx2.S: No such file or directory.
+(gdb) backtrace
+#0  __strlen_avx2_rtm () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:512
+#1  0x00007ffff7e1b258 in __vfprintf_internal (
+    s=0x7ffff7f90760 <_IO_2_1_stdout_>, format=0x55555555602e "%s",
+    ap=ap@entry=0x7fffffffe4b0, mode_flags=mode_flags@entry=0)
+    at ./stdio-common/vfprintf-process-arg.c:397
+#2  0x00007ffff7e0f65b in __printf (format=<optimized out>)
+    at ./stdio-common/printf.c:33
+#3  0x000055555555577d in main (argc=2, args=0x7fffffffe868) at good-life.c:143
+(gdb)
+
+Note: The program creashed when executing printf("%s", life[row][col]) in main() at line 148 and 160.
+Error: life[row][col] is a char, so '%s' expects a char* pointer. Passing a char as a pointer caused a segmentation fault.
+Fix applied #fix 1: changed printf("%s", life[row][col); to printf("%c", life[row][col]); at lines 148 and 160.
